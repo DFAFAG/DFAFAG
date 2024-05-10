@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <h1>ICT 9 E-Portfolio</h1>
+    </header>
+    <main>
+        <!-- Home or cover section -->
+        <section id="home" class="content-section visible">
+            <h2>Welcome to My E-Portfolio!</h2>
+            <p>Explore a collection of media, from videos and pictures to audio tracks and magazine articles.</p>
+            <nav>
+                <button onclick="showSection('videos')">Videos</button>
+                <button onclick="showSection('pictures')">Pictures</button>
+                <button onclick="showSection('audios')">Audios</button>
+                <button onclick="showSection('magazine')">Magazine</button>
+            </nav>
+        </section>
+        
+        <!-- Videos section (hidden initially) -->
+        <section id="videos" class="content-section">
+            <h2>Videos</h2>
+            <button onclick="showSection('home')">Go Home</button>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Pictures section (hidden initially) -->
+        <section id="pictures" class="content-section">
+            <h2>Pictures</h2>
+            <button onclick="showSection('home')">Go Home</button>
+            <img src="download1.jpg" alt="Sample Image 1">
+            <img src="download2.jpg" alt="Sample Image 2">
+<img src="download3.jpg" alt="Sample Image 3">
+<img src="download4.jpg" alt="Sample Image 4">
+<img src="download5.jpg" alt="Sample Image 5">
+        </section>
+
+        <!-- Audios section (hidden initially) -->
+        <section id="audios" class="content-section">
+            <h2>Audios</h2>
+            <button onclick="showSection('home')">Go Home</button>
+            <audio controls>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Magazine section (hidden initially) -->
+        <section id="magazine" class="content-section">
+            <h2>Magazine</h2>
+            <button onclick="showSection('home')">Go Home</button>
+<img src="magazine1.jpg" alt="Sample Image 5">
+            <p>This section features articles and write-ups from our latest magazine editions.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 ICT 9. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to control the visibility of sections based on navigation
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
